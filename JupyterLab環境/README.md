@@ -19,7 +19,15 @@ cd Docker/JupyterLab環境
 
 ```
 docker image build -t JupyterLab_env .
-JupyterLab環境
+```
+
+下記でイメージが作成されているか確認
+```
+docker image ls
+```
+
+JupyterLabの立ち上げ
+```
 docker run -v $PWD/src:/src -it --rm -p 7777:8888 jupyterlab_env jupyter-lab --ip 0.0.0.0 --allow-root
 ```
 
