@@ -28,10 +28,11 @@ docker image ls
 
 JupyterLabの立ち上げ
 ```
-docker run -v $PWD/src:/src -it --rm -p 7777:8888 jupyterlab_env jupyter-lab --ip 0.0.0.0 --allow-root
+docker run -v $PWD/src:/src -it --rm -p 8080:8080 jupyterlab_env jupyter-lab --ip 0.0.0.0 --port=8080 --allow-root
 ```
 
 下記へアクセス
 http://127.0.0.1:7777
+http://127.0.0.1:8080
 
 コマンド実行時にでるアクセストークンを入力するとJupyterLabを使えます。
